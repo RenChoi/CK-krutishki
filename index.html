@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search for a city...">
+                    <button id="search-button"><img src="search.png" alt="Search"></button>
+                </div>
+                <div class="location">
+                    <img src="location.png" alt="Location">
+                    <span id="location">Delhi, India</span>
+                </div>
+            </div>
+            <div class="logo">
+                <span>SkyCast</span>
+            </div>
+        </div>
+    
+        <div class="main-content">
+            <div class="left-column">
+                <div class="current-weather">
+                    <div class = "weather-data">
+                        <div class="date">
+                            <span id="date">May 10th</span>
+                        </div>
+                        <div class="temperature">
+                            <span id="temperature">24</span>
+                            <span class="degree">°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="main-icon.png" alt="Weather Icon">
+                    </div>
+                </div>
+                <div class="today-forecast">
+                    <h3>TODAY'S FORECAST</h3>
+                    <div class="forecast-item-container">
+                        <div class="forecast-item">
+                            <div class="icon"><img src="cloud-icon-today.png" alt="Weather Icon"></div>
+                            <div class="temp">18°C</div>
+                            <div class="time">6:00 AM</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon"><img src="sun-icon-today.png" alt="Weather Icon"></div>
+                            <div class="temp">24°C</div>
+                            <div class="time">10:00 AM</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon"><img src="sun-rain-today.png" alt="Weather Icon"></div>
+                            <div class="temp">22°C</div>
+                            <div class="time">2:00 PM</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon"><img src="wind-icon-today.png" alt="Weather Icon"></div>
+                            <div class="temp">21°C</div>
+                            <div class="time">6:00 PM</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon"><img src="moon-rain-icon-today.png" alt="Weather Icon"></div>
+                            <div class="temp">17°C</div>
+                            <div class="time">10:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="air-conditions">
+                    <h3>AIR CONDITIONS</h3>
+                    <div class="condition">
+                        <div class="label">Real Feel</div>
+                        <div class="value" id="real-feel">25°C</div>
+                    </div>
+                    <div class="condition">
+                        <div class="label">Chance of rain</div>
+                        <div class="value" id="chance-of-rain">20%</div>
+                    </div>
+                    <div class="condition">
+                        <div class="label">Wind</div>
+                        <div class="value" id="wind">0.2 km/h</div>
+                    </div>
+                    <div class="condition">
+                        <div class="label">UV Index</div>
+
+
+                        <div class="value" id="uv-index">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="week-forecast">
+                <h3>7-DAY FORECAST</h3>
+                <div class="forecast-item-week">
+                    <div class="day">Thursday</div>
+                    <div class="temp">27°C</div>
+                    <div class="icon"><img src="sun-icon.png" alt="Weather Icon"></div>
+                   
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Friday</div>
+                    <div class="temp">25°C</div>
+                    <div class="icon"><img src="cloud-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Saturday</div>
+                    <div class="temp">20°C</div>
+                    <div class="icon"><img src="sun-rain-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Sunday</div>
+                    <div class="temp">18°C</div>
+                    <div class="icon"><img src="sun-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Monday</div>
+                    <div class="temp">23°C</div>
+                    <div class="icon"><img src="sun-cloud-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Tuesday</div>
+                    <div class="temp">21°C</div>
+                    <div class="icon"><img src="rain-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+                <div class="forecast-item-week">
+                    <div class="day">Wednesday</div>
+                    <div class="temp">22°C</div>
+                    <div class="icon"><img src="sun-icon.png" alt="Weather Icon"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

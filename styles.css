@@ -1,0 +1,286 @@
+/*ИТОГОВЫЙ ФАЙЛ*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.header-left {
+    flex: 2;
+    display: flex;
+    gap: 20px; /* Пробел между поиском и локацией */
+}
+.search-container {
+    background-color: rgba(80, 76, 76, 0.442); /* Серый с прозрачностью */
+    border-radius: 20px; /* Скругление углов контейнера */
+    padding: 5px 15px; /* Внутренние отступы */
+    width: 50%; /* Максимальная ширина */
+    flex-grow: 1;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.search-container input {
+    padding: 8px;
+    border: none;
+    background: transparent; /* Прозрачный фон */
+    color: white; /* Цвет текста */
+    width: 100%; /* Занимает всю доступную ширину */
+    outline: none; /* Убираем контур при фокусе */
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Цвет плейсхолдера */
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    padding: 5px;
+}
+
+.search-container img{
+    width: 70%;
+    height: auto;
+}
+.location {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px; /* Внутренние отступы */
+    width: 10%;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.location img {
+    margin-right: 10px;
+    width: 10%;
+    height: auto;
+}
+.logo {
+    font-size: 24px;
+    color: white;
+    flex: 1;
+    text-align: center; /* Центрируем логотип */
+    padding: 10px 20px;
+    margin-left: 20px; /* Отступ слева */
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: column; /* Элементы будут в колонку */
+    min-width: 0; /* Это важно для правильной работы text-overflow */
+}
+.date {
+    font-size: 48px; /* Увеличенный размер шрифта */
+    margin-bottom: 10px; /* Отступ между датой и температурой */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    text-overflow: ellipsis; /* Добавляем многоточие если текст не помещается */
+}
+
+.temperature {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.degree {
+    font-size: 32px;
+}
+
+.weather-icon img {
+    width: 30%;
+    margin-top: 30px;
+    float: right;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.today-forecast {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.today-forecast h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forecast-item-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-item {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    width: 15%;
+}
+
+.forecast-item .time, .forecast-item .day {
+    margin-bottom: 10px;
+}
+
+.forecast-item .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.forecast-item .temp {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.week-forecast {
+    flex: 1;
+    padding: 20px;
+    min-height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forecast-item-week {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Элементы растягиваются */
+    min-height: 45px; /* Минимальная высота каждого элемента */
+}
+.forecast-item-week:last-child {
+    margin-bottom: 0; /* Убираем отступ у последнего элемента */
+}
+.forecast-item-week .day {
+    width: 50%;
+    font-size: 16px;
+}
+
+
+.forecast-item-week .icon img{
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-item-week .temp {
+    width: 25%;
+    font-size: 16px;
+}
+
+
+.air-conditions {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.air-conditions h3 {
+    margin-top: 0;
+    grid-column: 1 / -1; /* Заголовок растягивается на все колонки */
+    margin-bottom: 15px; /* Добавляем отступ снизу */
+    text-align: left;
+}
+
+.condition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.condition:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.condition:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.condition:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+.condition:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.condition .label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.condition .value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .week-forecast {
+        width: 100%;
+    }
+    .forecast-item-week {
+        padding: 12px 10px;
+        min-height: 45px;
+    }
+    
+    .forecast-item-week .icon img {
+        width: 35px;
+        height: 35px;
+    }
+}
