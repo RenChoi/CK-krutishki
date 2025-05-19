@@ -29,7 +29,7 @@ function getLocalIcon(main) {
   }
 }
 
-// Иконки для почасового прогноза (с учётом времени)
+// Иконки для почасового прогноза
 function getHourlyIcon(main, hour) {
   const isDay = hour >= 6 && hour < 18;
   switch (main) {
@@ -123,12 +123,9 @@ async function getForecast(lat, lon) {
   }
   
 
-// Обновляем почасовой прогноз по фиксированным часам
-// Обновлённая функция updateHourlyForecast: фильтруем текущий день и ищем ближайший час
 function updateHourlyForecast(list) {
     desiredHours.forEach((targetHour, idx) => {
       const item = hourlyItems[idx];
-      // Ищем в списке прогнозов ближайший по значению часа к targetHour
       const bestMatch = list.reduce((prev, curr) => {
         const prevHour = new Date(prev.dt * 1000).getHours();
         const currHour = new Date(curr.dt * 1000).getHours();
@@ -143,17 +140,14 @@ function updateHourlyForecast(list) {
   
   
   
-  // — Полная замена updateDailyForecast на работу с data.list из /forecast:
   function updateDailyForecast(dailyArray) {
     dailyArray.forEach((dayData, idx) => {
       const item = dailyItems[idx];
       if (!item) return;
   
-      // Вычисляем название дня
       const dayName = new Date(dayData.dt * 1000)
         .toLocaleDateString('en-US', { weekday: 'long' });
   
-      // Путь до вашей локальной иконки
       const iconPath = getLocalIcon(dayData.weather[0].main);
   
       item.querySelector('.day').textContent  = dayName;
