@@ -78,7 +78,7 @@ async function getCurrentWeather(city) {
     weatherIconElement.src = getLocalIcon(data.weather[0].main);
     weatherIconElement.alt = data.weather[0].description;
     realFeelElement.textContent = `${Math.round(data.main.feels_like)}°C`;
-    windElement.textContent = `${data.wind.speed} km/h`;
+    windElement.textContent = `${data.wind.speed} m/s`;
 
     await getForecast(data.coord.lat, data.coord.lon);
   } catch (err) {
